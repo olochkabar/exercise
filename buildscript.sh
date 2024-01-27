@@ -18,7 +18,7 @@ DOCKERHUB_USERNAME="olochkabar"
 
 
 # build the docker image
-sudo docker build --no-cache -t $IMAGE_NAME:$IMAGE_VERSION .
+sudo docker build -t $IMAGE_NAME:$IMAGE_VERSION .
 
 # login to your dockerhub account
 cat ~/dockerpwd.txt | sudo docker login -u $DOCKERHUB_USERNAME --password-stdin
@@ -30,12 +30,6 @@ sudo docker tag $IMAGE_NAME:$IMAGE_VERSION $DOCKERHUB_USERNAME/$IMAGE_NAME:$IMAG
 
 # push the image to your docker hub repository
 sudo docker push $DOCKERHUB_USERNAME/$IMAGE_NAME:$IMAGE_VERSION
-
-#remove the image from my local environment
-
-sudo docker rmi -f $IMAGE_NAME:$IMAGE_VERSION
-sudo docker rmi -f $IMAGE_NAME
-
 
 
 #version output for later use

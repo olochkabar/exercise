@@ -3,10 +3,7 @@
 .terraform/
 configmap.auto.tfvars
 ingress.auto.tfvars
-mytls.crt
-mytls.key
 service.auto.tfvars
 terraform.tfstate
 terraform.tfstate.backup
 terraform.tfvars
-svc.yaml
