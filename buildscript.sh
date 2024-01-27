@@ -34,6 +34,8 @@ sudo docker push $DOCKERHUB_USERNAME/$IMAGE_NAME:$IMAGE_VERSION
 #remove the image from my local environment
 
 sudo docker rmi -f $IMAGE_NAME:$IMAGE_VERSION
+sudo docker rmi -f $IMAGE_NAME
+
 
 
 #version output for later use
