@@ -1,0 +1,1 @@
+NUMBER = "1.5 billion"

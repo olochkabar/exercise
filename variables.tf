@@ -1,0 +1,74 @@
+#general variables
+variable "namespace" {
+    type = string
+    default = "candidate-d"
+}
+
+variable "app" {
+    type = string
+    default = "olu-app"
+}
+
+variable "config_path" {
+    type = string
+    default = "~/.kube/config"
+}
+
+variable "config_context" {
+    type = string
+    default = "turo-interview"
+}
+
+
+#deployment variable
+variable "replicas" {
+    type = number
+    default = 1
+}
+
+variable "image" {
+    type = string
+    default = "olochkabar/oluapp:v1.0.0"
+}
+
+#service variables
+
+variable "port" {
+    type = number
+    default = 80
+}
+
+variable "target_port" {
+    type = number
+    default = 80
+}
+
+variable "service_type" {
+    type = string
+    default = "ClusterIP"
+}
+
+
+#configmap variables
+
+variable "NUMBER" {
+    type = string
+    default = "1.5 billion"
+}
+
+#ingress
+
+variable "host" {
+    type = string
+    default = "olu.test-subaccount-1-v02.test-subaccount-1.rr.mu"
+}
+
+variable "acm" {
+    type = string
+    default = "arn:aws:acm:us-east-1:663118211814:certificate/b7966c21-51ec-430e-b6fb-a0410e0af514"
+}
+
+variable "ssl" {
+    type = bool
+    default = "true"
+}    
