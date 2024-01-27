@@ -30,9 +30,3 @@ git push oloch $FEATURE_BRANCH
 
 # Step 4: Create a Pull Request
 gh pr create --repo $REPO --base $TARGET_BRANCH --head $FEATURE_BRANCH --title "$PR_TITLE" --body "$PR_BODY" 
-
-#gh pr create --base main --head $FEATURE_BRANCH --title "Update to version $NEW_VERSION" --body "This PR updates the web app to version $NEW_VERSION."
-
-
-#REVIEWERS="reviewer1,reviewer2"  # Optional: Replace with GitHub usernames of reviewers
-#--reviewer $REVIEWERS
