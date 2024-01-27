@@ -32,4 +32,4 @@ sudo docker tag $IMAGE_NAME:$IMAGE_VERSION $DOCKERHUB_USERNAME/$IMAGE_NAME:$IMAG
 sudo docker push $DOCKERHUB_USERNAME/$IMAGE_NAME:$IMAGE_VERSION
 
 #version output for later use
-echo “$IMAGE_VERSION of $IMAGE_NAME successfully published and ready for use”
+echo “Version $IMAGE_VERSION of $IMAGE_NAME successfully published and ready for use”
