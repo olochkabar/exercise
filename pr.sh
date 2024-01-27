@@ -1,7 +1,7 @@
 
 #!/bin/bash
 
-# Check if version is provided
+# To take version as input
 if [ "$#" -ne 1 ]; then
     echo "Usage: $0 <new-version>"
     exit 1

@@ -4,9 +4,18 @@
 #if any command fails, the script would exit immediately and any unset variables 
 set  -eou pipefail
 
+
+# To take version as input
+if [ "$#" -ne 1 ]; then
+    echo "Usage: $0 <new-version>"
+    exit 1
+fi
+
+
 #variables
 IMAGE_NAME="oluapp"
-IMAGE_VERSION="v1.0.0"
+#IMAGE_VERSION="v1.0.0"
+IMAGE_VERSION=$1
 DOCKERHUB_USERNAME="olochkabar"
 
 
