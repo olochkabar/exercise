@@ -23,11 +23,9 @@ sed -i '' "s|image = .*|image = \"olochkabar/oluapp:$NEW_VERSION\"|g" "$DEPLOYME
 # Step 2: Create and checkout to a new branch
 git checkout -b $BRANCH_NAME
 
-# sed -i "s|image = \"olochkabar/oluapp:v1\"|image = \"olochkabar/oluapp:$NEW_VERSION\"|g" $$DEPLOYMENT_FILE
-
 # Step 3: Git Operations (Add, Commit, Push)
 git add $DEPLOYMENT_FILE
-git commit -m "Update application to version $NEW_VERSION"
+git commit -m "update application to version $NEW_VERSION"
 git push oloch $BRANCH_NAME
 
 # Step 4: Create a Pull Request
