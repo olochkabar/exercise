@@ -8,13 +8,12 @@ if [ "$#" -ne 1 ]; then
 fi
 
 NEW_VERSION=$1
-BRANCH_NAME="turoapp-$NEW_VERSION"
+FEATURE_BRANCH="turoapp-$NEW_VERSION"
 DEPLOYMENT_FILE="deployment.auto.tfvars"
 REPO="olochkabar/exercise" 
-SOURCE_BRANCH=$BRANCH_NAME
 TARGET_BRANCH="main"
 PR_TITLE="Update to version $NEW_VERSION" 
-PR_BODY="This PR updates the web app to version $NEW_VERSION."
+PR_BODY="This PR updates the app to version $NEW_VERSION."
 
 
 # Step 1: Update the Docker image version in the Terraform configuration
@@ -22,16 +21,17 @@ sed -i '' "s|image = .*|image = \"olochkabar/oluapp:$NEW_VERSION\"|g" "$DEPLOYME
 
 
 # Step 2: Create and checkout to a new branch
-git checkout -b $BRANCH_NAME
+git checkout -b $FEATURE_BRANCH
 
 # Step 3: Git Operations (Add, Commit, Push)
 git add $DEPLOYMENT_FILE
 git commit -m "update application to version $NEW_VERSION"
-git push oloch $BRANCH_NAME
+git push oloch $FEATURE_BRANCH
 
 # Step 4: Create a Pull Request
-gh pr create --repo $REPO --base $TARGET_BRANCH --head $SOURCE_BRANCH --title "$PR_TITLE" --body "$PR_BODY" 
-#gh pr create --base main --head $BRANCH_NAME --title "Update to version $NEW_VERSION" --body "This PR updates the web app to version $NEW_VERSION."
+gh pr create --repo $REPO --base $TARGET_BRANCH --head $FEATURE_BRANCH --title "$PR_TITLE" --body "$PR_BODY" 
+
+#gh pr create --base main --head $FEATURE_BRANCH --title "Update to version $NEW_VERSION" --body "This PR updates the web app to version $NEW_VERSION."
 
 
 #REVIEWERS="reviewer1,reviewer2"  # Optional: Replace with GitHub usernames of reviewers
