@@ -11,10 +11,8 @@ if [ "$#" -ne 1 ]; then
     exit 1
 fi
 
-
 #variables
 IMAGE_NAME="oluapp"
-#IMAGE_VERSION="v1.0.0"
 IMAGE_VERSION=$1
 DOCKERHUB_USERNAME="olochkabar"
 
