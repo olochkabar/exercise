@@ -1,2 +1,2 @@
 replicas = 1
-image = "olochkabar/oluapp:v1.0.0"
+image = "olochkabar/oluapp:v2.0.0"
