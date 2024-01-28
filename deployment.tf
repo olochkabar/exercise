@@ -25,7 +25,8 @@ resource "kubernetes_deployment_v1" "olu-app" {
 
       spec {
         container {
-          image = var.image
+          #image = "olochkabar/oluapp:2"
+          image = "olochkabar/oluapp:2"
           name  = "oluapp"
           env {
             name = "NUMBER"
