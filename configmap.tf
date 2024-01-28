@@ -5,7 +5,6 @@ resource "kubernetes_config_map" "turoapp-config" {
   }
 
   data = {
-    #"NUMBER" = "1.6 billion"
    "NUMBER" = var.NUMBER
   }
 }
