@@ -1,13 +1,29 @@
+
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Page 1</title>
-    <meta http-equiv="refresh" content="0;url=http://oluwa.test-subaccount-1-v02.test-subaccount-1.rr.mu/page2.html">
+    <title>Redirecting to Page 2</title>
+    <!-- Meta tags to prevent caching -->
     <meta http-equiv="pragma" content="no-cache" />
     <meta http-equiv="cache-control" content="no-store" />
+    <meta http-equiv="refresh" content="0;url=http://oluwa.test-subaccount-1-v02.test-subaccount-1.rr.mu/page2.html">
+    <style>
+        body {
+            background-color: green;
+            text-align: center;
+            color: white;
+            font-family: Arial, sans-serif;
+            font-size: 1.5em;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                font-size: 1em;
+            }
+        }
+    </style>
 </head>
 <body>
-    <p>You are being redirected to Page 2...</p>
+    Redirecting to Page 2...
 </body>
 </html>
-

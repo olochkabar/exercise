@@ -1,16 +1,60 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"></html>
 <head>
-    <title>Turo Home</title>
-</head>
-<body>
-    <h1>Welcome to Turo Home</h1>
-    <p>We want to put the ${NUMBER} cars in the world to better use</p>
-    <a href="http://oluwa.test-subaccount-1-v02.test-subaccount-1.rr.mu/page1.html">Go to Page 1</a>
-    <a href="http://oluwa.test-subaccount-1-v02.test-subaccount-1.rr.mu/page2.html">Go to Page 2</a>
-    <a href="http://oluwa.test-subaccount-1-v02.test-subaccount-1.rr.mu/config.html">Go to Config</a>
+    <title>Welcome to Turo</title>
+    <!-- Meta tags to prevent caching -->
     <meta http-equiv="pragma" content="no-cache" />
     <meta http-equiv="cache-control" content="no-store" />
+    <style>
+        body {
+            background-color: green;
+            text-align: center;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
 
+        .header {
+            margin-top: 50px;
+            font-size: 2em;
+        }
+
+        .middle {
+            margin-top: 100px;
+            font-size: 1.5em;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 50px;
+            width: 100%;
+            font-size: 1.2em;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        @media (max-width: 600px) {
+            .header, .middle, .footer {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        Welcome to Turo
+    </div>
+    <div class="middle">
+        We want to put the ${NUMBER} cars in the world to better use
+    </div>
+    <div class="footer">
+        <a href="http://oluwa.test-subaccount-1-v02.test-subaccount-1.rr.mu/page1.html">Go to Page 1</a>
+        <a href="http://oluwa.test-subaccount-1-v02.test-subaccount-1.rr.mu/page2.html">Go to Page 2</a>
+        <a href="http://oluwa.test-subaccount-1-v02.test-subaccount-1.rr.mu/config.html">Go to Config</a>
+    </div>
 </body>
 </html>
