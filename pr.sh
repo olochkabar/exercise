@@ -18,7 +18,7 @@ PR_BODY="This PR updates the app to version $NEW_VERSION."
 
 
 # Step 1: Update the Docker image version in the Terraform configuration
-sed -i '' "s|image = .*|image = \"olochkabar/oluapp:$NEW_VERSION\"|g" "$DEPLOYMENT_FILE"
+sed -i '' "s|image = .*|image = \"olochkabar/turoapp:$NEW_VERSION\"|g" "$DEPLOYMENT_FILE"
 
 
 # Step 2: Create and checkout to a new branch
