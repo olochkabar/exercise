@@ -10,7 +10,7 @@ if [ "$#" -ne 1 ]; then
 fi
 
 #variables
-IMAGE_NAME="oluapp"
+IMAGE_NAME="turoapp"
 IMAGE_VERSION=$1
 DOCKERHUB_USERNAME="olochkabar"
 
