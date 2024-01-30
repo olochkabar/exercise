@@ -25,7 +25,7 @@ resource "kubernetes_deployment_v1" "olu-app" {
 
       spec {
         container {
-          image = "olochkabar/turoapp:v1.0.0"
+          image = "olochkabar/turoapp:v2.0.0"
           name  = "oluapp"
           env {
             name = "NUMBER"
