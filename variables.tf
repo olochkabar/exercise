@@ -11,12 +11,11 @@ variable "app" {
 
 variable "config_path" {
     type = string
-    default = "~/.kube/config"
+
 }
 
 variable "config_context" {
     type = string
-    default = "turo-interview"
 }
 
 
@@ -65,7 +64,6 @@ variable "host" {
 
 variable "acm" {
     type = string
-    default = "arn:aws:acm:us-east-1:663118211814:certificate/b7966c21-51ec-430e-b6fb-a0410e0af514"
 }
 
 variable "ssl" {
