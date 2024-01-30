@@ -10,7 +10,7 @@ fi
 NEW_VERSION=$1
 FEATURE_BRANCH="turoapp-$NEW_VERSION"
 #DEPLOYMENT_FILE="deployment.auto.tfvars"
-DEPLOYMENT_FILE="deployment.tf"
+DEPLOYMENT_FILE="Terraform-Config-File/deployment.tf"
 REPO="olochkabar/exercise" 
 TARGET_BRANCH="main"
 PR_TITLE="Update to version $NEW_VERSION" 

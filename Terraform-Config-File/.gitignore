@@ -1,4 +1,3 @@
-.DS_Store
 .terraform.lock.hcl
 .terraform/
 configmap.auto.tfvars
