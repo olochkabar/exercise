@@ -2,30 +2,30 @@
  resource "kubernetes_ingress_v1" "turoapp-ingress" {
   metadata {
     name = "turoapp-ingress"
-    namespace = "candidate-d"
+    namespace = var.namespace
     annotations = {
-      "nginx.ingress.kubernetes.io/ssl-redirect" = "true"
+      "nginx.ingress.kubernetes.io/ssl-redirect" = var.ssl
       "nginx.ingress.kubernetes.io/rewrite-target" = "/"
      
       # External DNS - For creating a Record Set in Route53
-      "external-dns.alpha.kubernetes.io/hostname" = "oluwa.test-subaccount-1-v02.test-subaccount-1.rr.mu"
+      "external-dns.alpha.kubernetes.io/hostname" = var.host
      
       # SSL Settings
-      "alb.ingress.kubernetes.io/certificate-arn" = "arn:aws:acm:us-east-1:663118211814:certificate/b7966c21-51ec-430e-b6fb-a0410e0af514"
+      "alb.ingress.kubernetes.io/certificate-arn" = var.acm
     }
   }
 
   spec {
     ingress_class_name = "nginx"
     rule {
-      host = "oluwa.test-subaccount-1-v02.test-subaccount-1.rr.mu"
+      host = var.host
       http {
         path {
           backend {
             service {
               name = kubernetes_service_v1.olu-app-svc.metadata[0].name
               port {
-                number = 80
+                number = var.port
               }
             }
           }
