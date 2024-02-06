@@ -39,6 +39,7 @@ resource "kubernetes_deployment_v1" "olu-app" {
           volume_mount {
             name       = "config-volume"
             mount_path = "/usr/share/nginx/html/config.html"
+            #use sub_path to prevent config.html from overiding other html files inside /usr/share/nginx/html and make them inaccessible
             sub_path = "config.html"
           }
         }

@@ -1,4 +1,5 @@
 #general variables
+
 variable "namespace" {
     type = string
     default = "candidate-d"

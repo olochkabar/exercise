@@ -1,15 +1,15 @@
 
 #!/bin/bash
 
-# To take version as input
+# Conditional block to ensure that one argument is provided
 if [ "$#" -ne 1 ]; then
     echo "Usage: $0 <new-version>"
     exit 1
 fi
 
+# Variables 
 NEW_VERSION=$1
 FEATURE_BRANCH="turoapp-$NEW_VERSION"
-#DEPLOYMENT_FILE="deployment.auto.tfvars"
 DEPLOYMENT_FILE="Terraform-Config-File/deployment.tf"
 REPO="olochkabar/exercise" 
 TARGET_BRANCH="main"

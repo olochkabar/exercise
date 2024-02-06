@@ -1,5 +1,5 @@
 
-# Use the offcial Nginx image from Docker Hub
+# Use the official Nginx image from Docker Hub
 FROM nginx:1.21.4
 
 #install curl
@@ -19,9 +19,9 @@ EXPOSE 80
 #copy entrypoint bash script
 COPY entrypoint.sh /entrypoint.sh
 
-#make the bash script executable
+#make the entrypoint bash script executable
 RUN chmod +x /entrypoint.sh
 
-# Start Nginx server with bash script
+# Start Nginx server with the entrypoint bash script
 ENTRYPOINT ["/entrypoint.sh"]
 

@@ -4,7 +4,7 @@
     name = "turoapp-ingress"
     namespace = var.namespace
     annotations = {
-      "nginx.ingress.kubernetes.io/ssl-redirect" = var.ssl
+      # Target setting - to modify the path of the request before it gets forwarded to the application running in the cluster
       "nginx.ingress.kubernetes.io/rewrite-target" = "/"
      
       # External DNS - For creating a Record Set in Route53
@@ -12,6 +12,7 @@
      
       # SSL Settings
       "alb.ingress.kubernetes.io/certificate-arn" = var.acm
+      "nginx.ingress.kubernetes.io/ssl-redirect" = var.ssl
     }
   }
 

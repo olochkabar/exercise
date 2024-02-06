@@ -1,9 +1,9 @@
 #!/bin/bash
 
-#if any command fails, the script would exit immediately and any unset variables 
+# For error handling to ensure the script exits if any command fails or tries to use any undefined variable
 set  -eou pipefail
 
-# To take version as input
+# Conditional block to ensure that one argument is provided
 if [ "$#" -ne 1 ]; then
     echo "Usage: $0 <new-version>"
     exit 1
