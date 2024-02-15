@@ -20,7 +20,7 @@ variable "config_context" {
 }
 
 
-#deployment variable
+#deployment variables
 variable "replicas" {
     type = number
     default = 1
@@ -56,7 +56,7 @@ variable "NUMBER" {
     default = "1.5 billion"
 }
 
-#ingress
+#ingress variables
 
 variable "host" {
     type = string

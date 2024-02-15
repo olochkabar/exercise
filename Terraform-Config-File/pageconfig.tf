@@ -5,7 +5,7 @@ resource "kubernetes_config_map" "page-config" {
   }
 
   data = {
-    # use a file function to avoid errors and keep code clean
+    # using a file function to avoid errors and keep code clean
     "config.html" = "${file("${path.module}/config.html")}"
   }
 }

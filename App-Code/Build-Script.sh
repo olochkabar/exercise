@@ -17,13 +17,13 @@ DOCKERHUB_USERNAME="olochkabar"
 # build the docker image
 sudo docker build -t $IMAGE_NAME:$IMAGE_VERSION .
 
-# login to your dockerhub account
+# login to dockerhub account
 cat ~/dockerpwd.txt | sudo docker login -u $DOCKERHUB_USERNAME --password-stdin
 
-# use the docker tag command to give the image a new name
+# use the docker tag command to give the image a new name to make push to dockerhub possible
 sudo docker tag $IMAGE_NAME:$IMAGE_VERSION $DOCKERHUB_USERNAME/$IMAGE_NAME:$IMAGE_VERSION
 
-# push the image to your docker hub repository
+# push the image to  dockerhub repository
 sudo docker push $DOCKERHUB_USERNAME/$IMAGE_NAME:$IMAGE_VERSION
 
 #version output for later use
